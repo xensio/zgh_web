@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziombkowy Generator Haseł</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="ascii-text">
+        <pre>
+)                                           
+( /(                          )             )    
+)\())  (             )     ( /(     (    ( /(  
+((_)\   )\    (      (      )\())   ))\   )\()) 
+ _((_) ((_)   )\     )\  ' ((_)\   /((_) ((_)\  
+|_  /   (_)  ((_)  _((_))  | |(_) (_))   | |(_) 
+ / /    | | / _ \ | '  \() | '_ \ / -_)  | / /  
+/___|   |_| \___/ |_|_|_|  |_.__/ \___|  |_\_\  
+        </pre>
+    </div>
+
+    <h1>Ziombkowy generator haseł 1.2</h1>
+    <form id="passwordForm" method="POST" action="generate_passwords.php">
+        <label for="numPasswords">Ilość ciągów znaków:</label>
+        <input type="number" id="numPasswords" name="numPasswords" min="1" required>
+        
+        <label for="passwordLength">Długość ciągu znaków:</label>
+        <input type="number" id="passwordLength" name="passwordLength" min="1" required>
+        
+        <label for="lowercase">Małe litery:</label>
+        <input type="checkbox" id="lowercase" name="lowercase">
+        
+        <label for="uppercase">Duże litery:</label>
+        <input type="checkbox" id="uppercase" name="uppercase">
+        
+        <label for="numbers">Cyfry:</label>
+        <input type="checkbox" id="numbers" name="numbers">
+        
+        <label for="specialChars">Znaki specjalne:</label>
+        <input type="checkbox" id="specialChars" name="specialChars">
+        
+        <label for="fileFormat">Format pliku:</label>
+        <select id="fileFormat" name="fileFormat">
+            <option value="txt">TXT</option>
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+        </select>
+        
+        <button type="submit">Generuj ziąmpka!</button>
+    </form>
+</div>
+
+</body>
+</html>
