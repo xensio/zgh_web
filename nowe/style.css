@@ -1,0 +1,136 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2E2E2E;  
+    color: #fff;  
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #333;  
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #008cff;  
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #B0B0B0;  
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #008cff;  
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #444;  
+    color: #fff;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #008cff;  
+}
+
+button {
+    background-color: #33333300;
+    color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+  /* a to ciekawe, z tym sporo paprania się bylo aby tekst sie nie rozjezdzal*/
+.ascii-text pre {
+    font-family: 'Courier New', monospace;  
+    white-space: pre-wrap;  /* to zachowuje :białe spacje" i przerwy*/
+    word-wrap: break-word; /* to gwarantuje ze dlugie ciagi typu wlasnie ascii nie beda sie zawijac do kolejnych linijek*/
+    text-align: center;
+    font-size: 14px;
+    color: #8BC34A;  
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+    
+    @keyframes header-animacja {
+        from {transform: scale(105%);}
+        to {transform: scale(95%);}
+      }
+      
+      .animowany {
+        animation-delay: 2s;
+        animation: header-animacja 5s infinite alternate;
+        filter: drop-shadow(15px 15px 5px rgba(0,0,0,0.3));
+      }
+
+      #ziombekguzik {
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+      }
+
+      @media screen and (max-width: 800px) {
+        .ascii-text pre {
+            transform: scale(0.6);
+            width: 150%;
+            translate: -15%;
+        }
+        #ziombekguzik {
+            width: 100%;
+        }
+        }
+        @keyframes ognia {
+            0%  {color: rgb(255, 136, 0);}
+            50%  {color: rgb(255, 94, 0);}
+            100% {color: rgb(255, 230, 1);}
+            }
+            @keyframes ognia2 {
+                0%  {color: rgb(255, 73, 73)}
+                100%  {color: rgb(255, 43, 15)}
+                }
+            
+            #z1 {
+            animation-delay: 270ms;
+            animation: ognia 270ms infinite normal;
+            }
+            #z2 {
+            animation-delay: 260ms;
+            animation: ognia 260ms infinite normal;
+            }
+            #z3 {
+            animation-delay: 250ms;
+            animation: ognia 250ms infinite normal;
+            }
+            #z4 {
+            animation-delay: 240ms;
+            animation: ognia 240ms infinite normal;
+            }
+            #z5 {
+            animation-delay: 230ms;
+            animation: ognia 230ms infinite normal;
+            }
+            #z6 {
+            animation-delay: 220ms;
+            animation: ognia2 220ms infinite alternate-reverse;
+            }
+            #z7 {
+            animation-delay: 210ms;
+            animation: ognia2 210ms infinite alternate-reverse;
+            }
+            #z8 {
+            animation-delay: 200ms;
+            animation: ognia2 200ms infinite alternate-reverse;
+            }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziombkowy Generator Haseł</title>
+    <link rel="icon" type="image/png" href="/zdjecia/ziombek.png">
+    <link rel="stylesheet" href="style.css">
+
+<script>
+        function miau() {
+            var audio = new Audio('/dzwieki/generancja.mp3');
+            audio.play();
+
+        }
+</script>
+<script>
+    function czekboks1() {
+        var audio = new Audio('/dzwieki/czekboks1.mp3');
+        audio.play();
+
+    }
+</script>
+<script>
+    function czekboks2() {
+        var audio = new Audio('/dzwieki/czekboks2.mp3');
+        audio.play();
+
+    }
+</script>
+<script>
+    function czekboks3() {
+        var audio = new Audio('/dzwieki/czekboks3.mp3');
+        audio.play();
+
+    }
+</script>
+<script>
+    function czekboks4() {
+        var audio = new Audio('/dzwieki/czekboks4.mp3');
+        audio.play();
+
+    }
+</script>
+
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="ascii-text animowany">
+        <pre>
+<span id="z1">)                                           </span>
+<span id="z2">( /(                          )             )    </span>
+<span id="z3">)\())  (             )     ( /(     (    ( /(  </span>
+<span id="z4">((_)\   )\    (      (      )\())   ))\   )\()) </span>
+<span id="z5"> _((_) ((_)   )\     )\  ' ((_)\   /((_) ((_)\  </span>
+<span id="z6">|_  /   (_)  ((_)  _((_))  | |(_) (_))   | |(_) </span>
+<span id="z7"> / /    | | / _ \ | '  \() | '_ \ / -_)  | / /  </span>
+<span id="z8">/___|   |_| \___/ |_|_|_|  |_.__/ \___|  |_\_\  </span>
+        </pre>
+    </div>
+
+    <h1>Ziombkowy generator haseł 1.3</h1>
+    <form id="passwordForm" method="POST" action="generate_passwords.php">
+        <label for="numPasswords">Ilość ciągów znaków:</label>
+        <input type="number" id="numPasswords" name="numPasswords" min="1" required>
+        
+        <label for="passwordLength">Długość ciągu znaków:</label>
+        <input type="number" id="passwordLength" name="passwordLength" min="1" required>
+        
+        <label for="lowercase">Małe litery:</label>
+        <input type="checkbox" onclick="czekboks1()" id="lowercase" name="lowercase">
+        
+        <label for="uppercase">Duże litery:</label>
+        <input type="checkbox" onclick="czekboks2()" id="uppercase" name="uppercase">
+        
+        <label for="numbers">Cyfry:</label>
+        <input type="checkbox" onclick="czekboks3()" id="numbers" name="numbers">
+        
+        <label for="specialChars">Znaki specjalne:</label>
+        <input type="checkbox" onclick="czekboks4()" id="specialChars" name="specialChars">
+        
+        <label for="fileFormat">Format pliku:</label>
+        <select id="fileFormat" name="fileFormat">
+            <option value="txt">TXT</option>
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+        </select>
+        <div id="ziombekguzik">
+            <button type="submit" onclick="miau()">
+                <img id="ziombekguzik" src="/zdjecia/Untitled.png" width="30%">
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
